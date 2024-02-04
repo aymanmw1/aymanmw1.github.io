@@ -93,6 +93,7 @@
                 showCuteMessages();
                 document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
                 document.getElementById('noButton').style.fontSize = (16 - currentMessageIndex * 2) + 'px';
+                currentMessageIndex++;
             }
         }
 
@@ -101,7 +102,6 @@
             if (currentMessageIndex < messages.length) {
                 messages[currentMessageIndex].style.display = 'block';
                 document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
-                currentMessageIndex++;
             }
         }
     </script>
