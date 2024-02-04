@@ -63,10 +63,10 @@
 </head>
 <body>
     <div id="proposal-container">
-        <img src="https://imgur.com/G4oqRYW" alt="You and Ayooyty" style="max-width: 300px;">
+        <img src="https://i.imgur.com/G4oqRYW.jpg" alt="You and Ayooyty" style="max-width: 300px;">
         <h1>Will You Be My Valentine?</h1>
         <p>Dear Ayooyty,</p>
-        <p> You better press yes (:...</p>
+        <p>On this special day, I have a question for you...</p>
         <button id="yesButton" onclick="propose('Yes')">Yes</button>
         <button id="noButton" onclick="showCuteMessages()">No</button>
         <p id="response"></p>
@@ -79,7 +79,7 @@
             <p>I'm gonna cry…..</p>
             <p>You're breaking my heart ; (</p>
         </div>
-        <iframe id="helloKittyGIF" src="https://tenor.com/view/hellokitty-dancing-cartoon-dance-excited-gif-16073211778928151831" width="300" height="300" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+        <iframe id="helloKittyGIF" src="https://tenor.com/view/hello-kitty-kiss-i-luv-u-so-much-gif-14801613" width="300" height="300" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
     </div>
 
     <script>
