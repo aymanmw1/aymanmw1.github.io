@@ -50,7 +50,7 @@
 </head>
 <body>
     <div id="proposal-container">
-        <img src="your_picture_url.jpg" alt="You and Your Girlfriend">
+        <img src="https://imgur.com/4yPCtU8" alt="How cute we are <3">
         <h1>Will You Be My Valentine?</h1>
         <p>Dear [Ayooyty],</p>
         <p>On this special day, I have a question for you...</p>
