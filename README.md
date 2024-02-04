@@ -52,7 +52,7 @@
     <div id="proposal-container">
         <img src="your_picture_url.jpg" alt="You and Your Girlfriend">
         <h1>Will You Be My Valentine?</h1>
-        <p>Dear [Girlfriend's Name],</p>
+        <p>Dear [Ayooyty],</p>
         <p>On this special day, I have a question for you...</p>
         <button id="yesButton" onclick="propose('Yes')">Yes</button>
         <button id="noButton" onclick="showCuteMessages()">No</button>
