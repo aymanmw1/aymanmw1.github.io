@@ -66,7 +66,7 @@
         <img src="https://imgur.com/G4oqRYW" alt="You and Ayooyty" style="max-width: 300px;">
         <h1>Will You Be My Valentine?</h1>
         <p>Dear Ayooyty,</p>
-        <p>On this special day, I have a question for you...</p>
+        <p>On You better press yes (:...</p>
         <button id="yesButton" onclick="propose('Yes')">Yes</button>
         <button id="noButton" onclick="showCuteMessages()">No</button>
         <p id="response"></p>
