@@ -55,11 +55,15 @@
             display: none;
             margin-top: 20px;
         }
+
+        #helloKittyGIF {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div id="proposal-container">
-        <img src="https://i.imgur.com/4yPCtU8.jpg" alt="You and Ayooyty">
+        <img src="https://imgur.com/G4oqRYW" alt="You and Ayooyty" style="max-width: 300px;">
         <h1>Will You Be My Valentine?</h1>
         <p>Dear Ayooyty,</p>
         <p>On this special day, I have a question for you...</p>
@@ -75,6 +79,7 @@
             <p>I'm gonna cry…..</p>
             <p>You're breaking my heart ; (</p>
         </div>
+        <iframe id="helloKittyGIF" src="https://tenor.com/view/hellokitty-dancing-cartoon-dance-excited-gif-16073211778928151831" width="300" height="300" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
     </div>
 
     <script>
@@ -84,10 +89,7 @@
             if (answer === 'Yes') {
                 document.getElementById('response').innerHTML = 'Yes, I would love to be your Valentine!';
                 // Display the GIF
-                const dancingHelloKitty = document.createElement('img');
-                dancingHelloKitty.src = 'https://tenor.com/view/hellokitty-dancing-cartoon-dance-excited-gif-16073211778928151831';
-                dancingHelloKitty.alt = 'Dancing Hello Kitty';
-                document.getElementById('proposal-container').appendChild(dancingHelloKitty);
+                document.getElementById('helloKittyGIF').style.display = 'block';
             } else {
                 showCuteMessages();
                 document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
