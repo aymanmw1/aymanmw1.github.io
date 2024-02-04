@@ -78,8 +78,7 @@
             <p>I'm gonna cry…..</p>
             <p>You're breaking my heart ; (</p>
         </div>
-        <img id="helloKittyGIF" src="![image](https://github.com/aymanmw1/aymanmw1.github.io/assets/158856151/0a2f55d9-c48f-4366-a4ab-d7bbaf65e0b7)
-" alt="Hello Kitty Kiss GIF">
+        <img id="helloKittyGIF" src="https://tenor.com/view/sanrio-hello-kitty-gif-25418906" alt="Hello Kitty GIF">
     </div>
 
     <script>
