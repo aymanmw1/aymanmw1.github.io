@@ -1,4 +1,3 @@
-# aymanmw1.github.io
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +36,16 @@
             transition: all 0.3s ease;
         }
 
+        #yesButton {
+            background-color: green;
+            color: white;
+        }
+
+        #noButton {
+            background-color: red;
+            color: white;
+        }
+
         #response {
             font-weight: bold;
             margin-top: 20px;
@@ -50,9 +59,9 @@
 </head>
 <body>
     <div id="proposal-container">
-        <img src="https://imgur.com/4yPCtU8" alt="How cute we are <3">
+        <img src="https://imgur.com/4yPCtU8" alt="You and Ayooyty">
         <h1>Will You Be My Valentine?</h1>
-        <p>Dear [Ayooyty],</p>
+        <p>Dear Ayooyty,</p>
         <p>On this special day, I have a question for you...</p>
         <button id="yesButton" onclick="propose('Yes')">Yes</button>
         <button id="noButton" onclick="showCuteMessages()">No</button>
@@ -74,9 +83,11 @@
         function propose(answer) {
             if (answer === 'Yes') {
                 document.getElementById('response').innerHTML = 'Yes, I would love to be your Valentine!';
+                // Display the GIF
+                document.getElementById('proposal-container').innerHTML += '<img src="https://tenor.com/view/hellokitty-dancing-cartoon-dance-excited-gif-16073211778928151831" alt="Dancing Hello Kitty">';
             } else {
                 showCuteMessages();
-                document.getElementById('yesButton').style.fontSize = ${16 + currentMessageIndex * 2}px;
+                document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
             }
         }
 
