@@ -79,7 +79,7 @@
             <p>I'm gonna cry…..</p>
             <p>You're breaking my heart ; (</p>
         </div>
-        <iframe id="helloKittyGIF" src="https://tenor.com/view/hello-kitty-kiss-i-luv-u-so-much-gif-14801613" width="300" height="300" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+        <img id="helloKittyGIF" src="https://tenor.com/bvHsI.gif" alt="Hello Kitty Kiss GIF">
     </div>
 
     <script>
@@ -87,7 +87,7 @@
 
         function propose(answer) {
             if (answer === 'Yes') {
-                document.getElementById('response').innerHTML = 'Yes, I would love to be your Valentine!';
+                document.getElementById('response').innerHTML = 'YAYYYY❗❗';
                 // Display the GIF
                 document.getElementById('helloKittyGIF').style.display = 'block';
             } else {
