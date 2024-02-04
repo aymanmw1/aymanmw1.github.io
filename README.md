@@ -15,11 +15,12 @@
 
         #proposal-container {
             padding: 50px;
-            width: 100%;
+            width: 100vw; /* Change max-width to width and use vw for viewport width */
             height: 100vh;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 0; /* Remove margin */
         }
 
         #proposal-container img {
@@ -89,6 +90,10 @@
                 document.getElementById('response').innerHTML = 'YAYYYY❗❗';
                 // Display the GIF
                 document.getElementById('helloKittyGIF').style.display = 'block';
+                // Redirect to a new page after 2 seconds
+                setTimeout(function() {
+                    window.location.href = 'your_new_page.html';
+                }, 2000);
             } else {
                 showCuteMessages();
                 document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
