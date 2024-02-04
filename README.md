@@ -71,7 +71,6 @@
         <button id="noButton" onclick="showCuteMessages()">No</button>
         <p id="response"></p>
         <div id="cute-messages">
-            <p>No</p>
             <p>Are you sure?</p>
             <p>Really sure?</p>
             <p>Pookie please</p>
@@ -79,7 +78,8 @@
             <p>I'm gonna cry…..</p>
             <p>You're breaking my heart ; (</p>
         </div>
-        <img id="helloKittyGIF" src="https://tenor.com/bvHsI.gif" alt="Hello Kitty Kiss GIF">
+        <img id="helloKittyGIF" src="![image](https://github.com/aymanmw1/aymanmw1.github.io/assets/158856151/0a2f55d9-c48f-4366-a4ab-d7bbaf65e0b7)
+" alt="Hello Kitty Kiss GIF">
     </div>
 
     <script>
@@ -93,6 +93,7 @@
             } else {
                 showCuteMessages();
                 document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
+                document.getElementById('noButton').style.fontSize = (16 - currentMessageIndex * 2) + 'px';
             }
         }
 
@@ -100,6 +101,7 @@
             const messages = document.getElementById('cute-messages').children;
             if (currentMessageIndex < messages.length) {
                 messages[currentMessageIndex].style.display = 'block';
+                document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
                 currentMessageIndex++;
             }
         }
