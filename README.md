@@ -55,14 +55,18 @@
             display: none;
             margin-top: 20px;
         }
+
+        #helloKittyGIF {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div id="proposal-container">
-        <img src="https://i.imgur.com/G4oqRYW.jpg" alt="You and Ayooyty" style="max-width: 300px;">
+        <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
         <h1>Will You Be My Valentine?</h1>
         <p>Dear Ayooyty,</p>
-        <p>On this special day, I have a question for you...</p>
+        <p>You better say yes ( ˘ ³˘)♥︎ </p>
         <button id="yesButton" onclick="propose('Yes')">Yes</button>
         <button id="noButton" onclick="showCuteMessages()">No</button>
         <p id="response"></p>
@@ -74,7 +78,7 @@
             <p>I'm gonna cry…..</p>
             <p>You're breaking my heart ; (</p>
         </div>
-        <p>View Hello Kitty GIF: <a href="https://tenor.com/view/sanrio-hello-kitty-gif-25418906" target="_blank">Sanrio Hello Kitty GIF</a></p>
+        <img id="helloKittyGIF" src="https://tenor.com/view/sanrio-hello-kitty-gif-25418906" alt="Hello Kitty GIF">
     </div>
 
     <script>
@@ -83,6 +87,8 @@
         function propose(answer) {
             if (answer === 'Yes') {
                 document.getElementById('response').innerHTML = 'YAYYYY❗❗';
+                // Display the GIF
+                document.getElementById('helloKittyGIF').style.display = 'block';
             } else {
                 showCuteMessages();
                 document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
@@ -94,6 +100,7 @@
             const messages = document.getElementById('cute-messages').children;
             if (currentMessageIndex < messages.length) {
                 messages[currentMessageIndex].style.display = 'block';
+                document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
                 currentMessageIndex++;
             }
         }
