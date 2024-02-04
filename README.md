@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,8 +15,8 @@
 
         #proposal-container {
             padding: 50px;
-            max-width: 600px;
-            margin: auto;
+            width: 100%;
+            height: 100vh;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
