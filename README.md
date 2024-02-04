@@ -92,7 +92,6 @@
             } else {
                 showCuteMessages();
                 document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
-                document.getElementById('noButton').style.fontSize = (16 - currentMessageIndex * 2) + 'px';
                 currentMessageIndex++;
             }
         }
@@ -100,7 +99,9 @@
         function showCuteMessages() {
             const messages = document.getElementById('cute-messages').children;
             if (currentMessageIndex < messages.length) {
-                messages[currentMessageIndex].style.display = 'block';
+                for (let i = 0; i <= currentMessageIndex; i++) {
+                    messages[i].style.display = 'block';
+                }
                 document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
             }
         }
