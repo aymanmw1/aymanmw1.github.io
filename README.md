@@ -59,7 +59,7 @@
 </head>
 <body>
     <div id="proposal-container">
-        <img src="https://imgur.com/4yPCtU8" alt="You and Ayooyty">
+        <img src="https://i.imgur.com/4yPCtU8.jpg" alt="You and Ayooyty">
         <h1>Will You Be My Valentine?</h1>
         <p>Dear Ayooyty,</p>
         <p>On this special day, I have a question for you...</p>
@@ -84,7 +84,10 @@
             if (answer === 'Yes') {
                 document.getElementById('response').innerHTML = 'Yes, I would love to be your Valentine!';
                 // Display the GIF
-                document.getElementById('proposal-container').innerHTML += '<img src="https://tenor.com/view/hellokitty-dancing-cartoon-dance-excited-gif-16073211778928151831" alt="Dancing Hello Kitty">';
+                const dancingHelloKitty = document.createElement('img');
+                dancingHelloKitty.src = 'https://tenor.com/view/hellokitty-dancing-cartoon-dance-excited-gif-16073211778928151831';
+                dancingHelloKitty.alt = 'Dancing Hello Kitty';
+                document.getElementById('proposal-container').appendChild(dancingHelloKitty);
             } else {
                 showCuteMessages();
                 document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
