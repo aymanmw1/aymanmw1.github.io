@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -92,17 +92,16 @@
             } else {
                 showCuteMessages();
                 document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
-                currentMessageIndex++;
+                document.getElementById('noButton').style.fontSize = (16 - currentMessageIndex * 2) + 'px';
             }
         }
 
         function showCuteMessages() {
             const messages = document.getElementById('cute-messages').children;
             if (currentMessageIndex < messages.length) {
-                for (let i = 0; i <= currentMessageIndex; i++) {
-                    messages[i].style.display = 'block';
-                }
+                messages[currentMessageIndex].style.display = 'block';
                 document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
+                currentMessageIndex++;
             }
         }
     </script>
