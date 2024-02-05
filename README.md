@@ -59,6 +59,7 @@
 
         #helloKittyGIF {
             display: none;
+            margin: 0 auto; /* Center horizontally */
         }
 
         #valentine-sentence {
