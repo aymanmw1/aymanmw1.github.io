@@ -67,13 +67,6 @@
             padding: 10px;
             border-radius: 5px;
         }
-
-        /* New style for error message */
-        #error-message {
-            color: red;
-            font-size: 24px;
-            margin-top: 50px;
-        }
     </style>
 </head>
 
@@ -89,8 +82,7 @@
                 // Password is correct, proceed with the proposal
                 document.getElementById('proposal-container').style.display = 'block';
             } else {
-                // Password is incorrect, display an error message
-                document.getElementById('error-message').innerText = 'YOU ARE NOT MY AYA';
+                // Password is incorrect, do nothing or display an error message
             }
         }
 
@@ -140,11 +132,6 @@
         </div>
         <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
     </div>
-
-    <!-- Error message container -->
-    <div id="error-message"></div>
-
-    <!-- Additional HTML content, if any, can be added here -->
 
 </body>
 
