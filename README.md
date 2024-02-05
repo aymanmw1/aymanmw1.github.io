@@ -67,60 +67,11 @@
             padding: 10px;
             border-radius: 5px;
         }
-
-        /* New style for error message */
-        #error-message {
-            color: red;
-            font-size: 24px;
-            margin-top: 50px;
-        }
     </style>
 </head>
 
 <body>
-    <script>
-        let currentMessageIndex = 0;
-
-        function checkPassword() {
-            const enteredPassword = prompt("Enter our anniversary day (MM/DD/YYYY) to access:");
-
-            // Correct password: 12/06/2022
-            if (enteredPassword === "12/06/2022") {
-                // Password is correct, proceed with the proposal
-                document.getElementById('proposal-container').style.display = 'block';
-            } else {
-                // Password is incorrect, display an error message
-                document.getElementById('error-message').innerText = 'YOU ARE NOT MY AYA';
-            }
-        }
-
-        function propose(answer) {
-            // Check password before proceeding
-            checkPassword();
-
-            // Rest of your existing propose function
-            // ...
-        }
-
-        function showCuteMessages() {
-            const messages = document.getElementById('cute-messages').children;
-            if (currentMessageIndex < messages.length) {
-                messages[currentMessageIndex].style.display = 'block';
-                document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
-                currentMessageIndex++;
-            } else {
-                // If all messages shown, hide unnecessary elements
-                document.getElementById('valentine-sentence').style.display = 'none';
-                document.getElementById('proposal-container').style.padding = '20px';
-                document.getElementById('proposal-container').style.height = 'auto';
-                document.getElementById('yesButton').style.display = 'none';
-                document.getElementById('noButton').style.display = 'none';
-                document.getElementById('cute-messages').style.display = 'none';
-            }
-        }
-    </script>
-
-    <div id="proposal-container" style="display: none;">
+    <div id="proposal-container">
         <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
         <div id="valentine-sentence">
             <h1>Will You Be My Valentine?</h1>
@@ -141,9 +92,49 @@
         <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
     </div>
 
-    <!-- Error message container -->
-    <div id="error-message"></div>
+    <script>
+        let currentMessageIndex = 0;
 
+        function propose(answer) {
+            // Hide unnecessary elements
+            document.getElementById('valentine-sentence').style.display = 'none';
+            document.getElementById('proposal-container').style.padding = '20px';
+            document.getElementById('proposal-container').style.height = 'auto';
+
+            if (answer === 'Yes') {
+                // Display the result and GIF
+                document.getElementById('response').innerHTML = 'YAYYYY❗❗';
+                document.getElementById('helloKittyGIF').style.display = 'block';
+
+                // Hide other buttons and messages
+                document.getElementById('yesButton').style.display = 'none';
+                document.getElementById('noButton').style.display = 'none';
+                document.getElementById('cute-messages').style.display = 'none';
+            } else if (answer === 'No') {
+                // Show cute messages
+                showCuteMessages();
+                document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
+                document.getElementById('noButton').style.fontSize = (16 - currentMessageIndex * 2) + 'px';
+            }
+        }
+
+        function showCuteMessages() {
+            const messages = document.getElementById('cute-messages').children;
+            if (currentMessageIndex < messages.length) {
+                messages[currentMessageIndex].style.display = 'block';
+                document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
+                currentMessageIndex++;
+            } else {
+                // If all messages shown, hide unnecessary elements
+                document.getElementById('valentine-sentence').style.display = 'none';
+                document.getElementById('proposal-container').style.padding = '20px';
+                document.getElementById('proposal-container').style.height = 'auto';
+                document.getElementById('yesButton').style.display = 'none';
+                document.getElementById('noButton').style.display = 'none';
+                document.getElementById('cute-messages').style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
