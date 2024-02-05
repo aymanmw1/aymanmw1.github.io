@@ -14,7 +14,30 @@
             padding: 0;
         }
 
+        #password-container {
+            padding: 50px;
+            width: 100vw;
+            height: 100vh;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #passwordInput {
+            padding: 10px;
+            font-size: 16px;
+        }
+
         #proposal-container {
+            display: none;
             padding: 50px;
             width: 100vw;
             height: 100vh;
@@ -27,14 +50,6 @@
             max-width: 100%;
             border-radius: 5px;
             margin-bottom: 20px;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
 
         #yesButton {
@@ -72,18 +87,23 @@
 
 <body>
     <script>
-        let currentMessageIndex = 0;
-
-        function propose(answer) {
+        function checkPassword() {
             // Check for the correct password
             var enteredPassword = prompt("This website is only for Ayooyty. Enter our anniversary day to access:\n\nEnter the password (format: MM/DD/YYYY):");
             var correctPassword = "12/06/2022";
 
             if (enteredPassword !== correctPassword) {
                 alert("YOU ARE NOT MY AYOYTY. Access denied.");
-                return;
+            } else {
+                // Hide password container and display proposal content
+                document.getElementById('password-container').style.display = 'none';
+                document.getElementById('proposal-container').style.display = 'block';
             }
+        }
 
+        let currentMessageIndex = 0;
+
+        function propose(answer) {
             // Hide unnecessary elements
             document.getElementById('valentine-sentence').style.display = 'none';
             document.getElementById('proposal-container').style.padding = '20px';
@@ -123,6 +143,10 @@
             }
         }
     </script>
+
+    <div id="password-container">
+        <button onclick="checkPassword()">Enter</button>
+    </div>
 
     <div id="proposal-container">
         <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
