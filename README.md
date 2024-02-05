@@ -78,7 +78,7 @@
         <p>Dear Ayooyty,</p>
         <p>You better say yes ( ˘ ³˘)♥︎ </p>
         <button id="yesButton" onclick="propose('Yes')">Yes</button>
-        <button id="noButton" onclick="showCuteMessages()">No</button>
+        <button id="noButton" onclick="propose('No')">No</button>
         <p id="response"></p>
         <div id="cute-messages">
             <p>Are you sure?</p>
@@ -109,5 +109,31 @@
                 document.getElementById('yesButton').style.display = 'none';
                 document.getElementById('noButton').style.display = 'none';
                 document.getElementById('cute-messages').style.display = 'none';
+            } else if (answer === 'No') {
+                // Show cute messages
+                showCuteMessages();
+                document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
+                document.getElementById('noButton').style.fontSize = (16 - currentMessageIndex * 2) + 'px';
+            }
+        }
+
+        function showCuteMessages() {
+            const messages = document.getElementById('cute-messages').children;
+            if (currentMessageIndex < messages.length) {
+                messages[currentMessageIndex].style.display = 'block';
+                document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
+                currentMessageIndex++;
             } else {
-                // S
+                // If all messages shown, hide unnecessary elements
+                document.getElementById('valentine-sentence').style.display = 'none';
+                document.getElementById('proposal-container').style.padding = '20px';
+                document.getElementById('proposal-container').style.height = 'auto';
+                document.getElementById('yesButton').style.display = 'none';
+                document.getElementById('noButton').style.display = 'none';
+                document.getElementById('cute-messages').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
