@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,8 +16,8 @@
 
         #proposal-container {
             padding: 50px;
-            max-width: 600px;
-            margin: auto;
+            width: 100vw;
+            height: 100vh;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -60,13 +60,21 @@
         #helloKittyGIF {
             display: none;
         }
+
+        #valentine-sentence {
+            background-color: pink;
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
 <body>
     <div id="proposal-container">
         <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
-        <h1>Will You Be My Valentine?</h1>
+        <div id="valentine-sentence">
+            <h1>Will You Be My Valentine?</h1>
+        </div>
         <p>Dear Ayooyty,</p>
         <p>You better say yes ( ˘ ³˘)♥︎ </p>
         <button id="yesButton" onclick="propose('Yes')">Yes</button>
