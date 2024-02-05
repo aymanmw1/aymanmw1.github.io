@@ -14,7 +14,9 @@
             padding: 0;
         }
 
-        #password-container {
+        #password-container,
+        #content-container {
+            display: none;
             padding: 50px;
             width: 100vw;
             height: 100vh;
@@ -31,7 +33,9 @@
             margin-bottom: 10px;
         }
 
-        #password-submit {
+        #password-submit,
+        #yesButton,
+        #noButton {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
@@ -40,6 +44,7 @@
             border: none;
             border-radius: 5px;
             transition: all 0.3s ease;
+            margin: 10px;
         }
 
         #response {
@@ -62,10 +67,6 @@
             background-color: pink;
             padding: 10px;
             border-radius: 5px;
-        }
-
-        #content-container {
-            display: none;
         }
     </style>
 </head>
@@ -106,7 +107,7 @@
             if (enteredPassword === correctPassword) {
                 // Correct password, hide password container and show content
                 document.getElementById('password-container').style.display = 'none';
-                document.getElementById('content-container').style.display = 'block';
+                document.getElementById('content-container').style.display = 'flex';
             } else {
                 // Incorrect password, show alternative message
                 document.getElementById('response').style.display = 'block';
