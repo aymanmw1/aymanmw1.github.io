@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -78,7 +78,8 @@
         }
 
         #valentine-sentence {
-            background-color: pink;
+            background-color: #ff8dd1; /* Updated pink shade */
+            color: white; /* White text */
             padding: 10px;
             border-radius: 5px;
         }
