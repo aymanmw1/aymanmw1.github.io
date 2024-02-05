@@ -1,6 +1,6 @@
-User
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,6 +62,7 @@ User
         }
     </style>
 </head>
+
 <body>
     <div id="proposal-container">
         <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
@@ -79,7 +80,7 @@ User
             <p>I'm gonna cry…..</p>
             <p>You're breaking my heart ; (</p>
         </div>
-        <img id="helloKittyGIF" src="https://tenor.com/view/sanrio-hello-kitty-gif-25418906" alt="Hello Kitty GIF">
+        <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
     </div>
 
     <script>
@@ -107,4 +108,5 @@ User
         }
     </script>
 </body>
+
 </html>
