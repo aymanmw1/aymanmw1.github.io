@@ -71,31 +71,19 @@
 </head>
 
 <body>
-    <div id="proposal-container">
-        <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
-        <div id="valentine-sentence">
-            <h1>Will You Be My Valentine?</h1>
-        </div>
-        <p>Dear Ayooyty,</p>
-        <p>You better say yes ( ˘ ³˘)♥︎ </p>
-        <button id="yesButton" onclick="propose('Yes')">Yes</button>
-        <button id="noButton" onclick="propose('No')">No</button>
-        <p id="response"></p>
-        <div id="cute-messages">
-            <p>Are you sure?</p>
-            <p>Really sure?</p>
-            <p>Pookie please</p>
-            <p>Don't do this to me</p>
-            <p>I'm gonna cry…..</p>
-            <p>You're breaking my heart ; (</p>
-        </div>
-        <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
-    </div>
-
     <script>
         let currentMessageIndex = 0;
 
         function propose(answer) {
+            // Check for the correct password
+            var enteredPassword = prompt("This website is only for Ayooyty. Enter our anniversary day to access:\n\nEnter the password (format: MM/DD/YYYY):");
+            var correctPassword = "12/06/2022";
+
+            if (enteredPassword !== correctPassword) {
+                alert("YOU ARE NOT MY AYOYTY. Access denied.");
+                return;
+            }
+
             // Hide unnecessary elements
             document.getElementById('valentine-sentence').style.display = 'none';
             document.getElementById('proposal-container').style.padding = '20px';
@@ -135,6 +123,28 @@
             }
         }
     </script>
+
+    <div id="proposal-container">
+        <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
+        <div id="valentine-sentence">
+            <h1>Will You Be My Valentine?</h1>
+        </div>
+        <p>Dear Ayooyty,</p>
+        <p>You better say yes ( ˘ ³˘)♥︎ </p>
+        <button id="yesButton" onclick="propose('Yes')">Yes</button>
+        <button id="noButton" onclick="propose('No')">No</button>
+        <p id="response"></p>
+        <div id="cute-messages">
+            <p>Are you sure?</p>
+            <p>Really sure?</p>
+            <p>Pookie please</p>
+            <p>Don't do this to me</p>
+            <p>I'm gonna cry…..</p>
+            <p>You're breaking my heart ; (</p>
+        </div>
+        <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
+    </div>
+
 </body>
 
 </html>
