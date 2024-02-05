@@ -95,26 +95,19 @@
         let currentMessageIndex = 0;
 
         function propose(answer) {
+            // Hide unnecessary elements
+            document.getElementById('valentine-sentence').style.display = 'none';
+            document.getElementById('proposal-container').style.padding = '20px';
+            document.getElementById('proposal-container').style.height = 'auto';
+
             if (answer === 'Yes') {
+                // Display the result and GIF
                 document.getElementById('response').innerHTML = 'YAYYYY❗❗';
-                // Display the GIF
                 document.getElementById('helloKittyGIF').style.display = 'block';
+
+                // Hide other buttons and messages
+                document.getElementById('yesButton').style.display = 'none';
+                document.getElementById('noButton').style.display = 'none';
+                document.getElementById('cute-messages').style.display = 'none';
             } else {
-                showCuteMessages();
-                document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
-                document.getElementById('noButton').style.fontSize = (16 - currentMessageIndex * 2) + 'px';
-            }
-        }
-
-        function showCuteMessages() {
-            const messages = document.getElementById('cute-messages').children;
-            if (currentMessageIndex < messages.length) {
-                messages[currentMessageIndex].style.display = 'block';
-                document.getElementById('noButton').innerHTML = messages[currentMessageIndex].innerText;
-                currentMessageIndex++;
-            }
-        }
-    </script>
-</body>
-
-</html>
+                // S
