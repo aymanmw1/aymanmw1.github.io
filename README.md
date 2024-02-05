@@ -67,6 +67,13 @@
             padding: 10px;
             border-radius: 5px;
         }
+
+        /* New style for error message */
+        #error-message {
+            color: red;
+            font-size: 24px;
+            margin-top: 50px;
+        }
     </style>
 </head>
 
@@ -82,7 +89,8 @@
                 // Password is correct, proceed with the proposal
                 document.getElementById('proposal-container').style.display = 'block';
             } else {
-                // Password is incorrect, do nothing or display an error message
+                // Password is incorrect, display an error message
+                document.getElementById('error-message').innerText = 'YOU ARE NOT MY AYA';
             }
         }
 
@@ -91,7 +99,26 @@
             checkPassword();
 
             // Rest of your existing propose function
-            // ...
+            // Hide unnecessary elements
+            document.getElementById('valentine-sentence').style.display = 'none';
+            document.getElementById('proposal-container').style.padding = '20px';
+            document.getElementById('proposal-container').style.height = 'auto';
+
+            if (answer === 'Yes') {
+                // Display the result and GIF
+                document.getElementById('response').innerHTML = 'YAYYYY❗❗';
+                document.getElementById('helloKittyGIF').style.display = 'block';
+
+                // Hide other buttons and messages
+                document.getElementById('yesButton').style.display = 'none';
+                document.getElementById('noButton').style.display = 'none';
+                document.getElementById('cute-messages').style.display = 'none';
+            } else if (answer === 'No') {
+                // Show cute messages
+                showCuteMessages();
+                document.getElementById('yesButton').style.fontSize = (16 + currentMessageIndex * 2) + 'px';
+                document.getElementById('noButton').style.fontSize = (16 - currentMessageIndex * 2) + 'px';
+            }
         }
 
         function showCuteMessages() {
@@ -130,9 +157,4 @@
             <p>I'm gonna cry…..</p>
             <p>You're breaking my heart ; (</p>
         </div>
-        <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
-    </div>
-
-</body>
-
-</html>
+        <
