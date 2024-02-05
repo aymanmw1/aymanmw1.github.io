@@ -63,6 +63,10 @@
             padding: 10px;
             border-radius: 5px;
         }
+
+        #content-container {
+            display: none;
+        }
     </style>
 </head>
 
@@ -74,22 +78,44 @@
         <p id="response"></p>
     </div>
 
+    <div id="content-container">
+        <div id="valentine-sentence">
+            <h1>Will You Be My Valentine?</h1>
+        </div>
+        <p>Dear Ayooyty,</p>
+        <p>You better say yes ( ˘ ³˘)♥︎ </p>
+        <button id="yesButton" onclick="propose('Yes')">Yes</button>
+        <button id="noButton" onclick="propose('No')">No</button>
+        <p id="response"></p>
+        <div id="cute-messages">
+            <p>Are you sure?</p>
+            <p>Really sure?</p>
+            <p>Pookie please</p>
+            <p>Don't do this to me</p>
+            <p>I'm gonna cry…..</p>
+            <p>You're breaking my heart ; (</p>
+        </div>
+        <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
+    </div>
+
     <script>
         function checkPassword() {
             const enteredPassword = document.getElementById('password-input').value;
             const correctPassword = '12/6/2022';
 
             if (enteredPassword === correctPassword) {
-                // Correct password, display content
+                // Correct password, hide password container and show content
                 document.getElementById('password-container').style.display = 'none';
-                document.getElementById('response').style.display = 'block';
-                document.getElementById('response').innerHTML = 'YAYYYY❗❗';
-                document.getElementById('helloKittyGIF').style.display = 'block';
+                document.getElementById('content-container').style.display = 'block';
             } else {
                 // Incorrect password, show alternative message
                 document.getElementById('response').style.display = 'block';
                 document.getElementById('response').innerHTML = 'You are not my Aya. Get out of here!';
             }
+        }
+
+        function propose(answer) {
+            // Your propose function logic here
         }
     </script>
 </body>
