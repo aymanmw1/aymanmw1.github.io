@@ -71,31 +71,27 @@
 </head>
 
 <body>
-    <div id="proposal-container">
-        <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
-        <div id="valentine-sentence">
-            <h1>Will You Be My Valentine?</h1>
-        </div>
-        <p>Dear Ayooyty,</p>
-        <p>You better say yes ( ˘ ³˘)♥︎ </p>
-        <button id="yesButton" onclick="propose('Yes')">Yes</button>
-        <button id="noButton" onclick="propose('No')">No</button>
-        <p id="response"></p>
-        <div id="cute-messages">
-            <p>Are you sure?</p>
-            <p>Really sure?</p>
-            <p>Pookie please</p>
-            <p>Don't do this to me</p>
-            <p>I'm gonna cry…..</p>
-            <p>You're breaking my heart ; (</p>
-        </div>
-        <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
-    </div>
-
     <script>
         let currentMessageIndex = 0;
 
+        function checkPassword() {
+            const enteredPassword = prompt("Enter our anniversary day to access:");
+            const correctPassword = "12/06/2022";
+
+            if (enteredPassword === correctPassword) {
+                // Password is correct, proceed with the proposal
+                document.getElementById('proposal-container').style.display = 'block';
+            } else {
+                // Password is incorrect, display an error message
+                document.body.innerHTML = '<h1 style="color: red;">YOU ARE NOT MY AYA</h1>';
+            }
+        }
+
         function propose(answer) {
+            // Check password before proceeding
+            checkPassword();
+
+            // Rest of your existing propose function
             // Hide unnecessary elements
             document.getElementById('valentine-sentence').style.display = 'none';
             document.getElementById('proposal-container').style.padding = '20px';
@@ -135,6 +131,28 @@
             }
         }
     </script>
+
+    <div id="proposal-container" style="display: none;">
+        <img src="https://i.imgur.com/G4oqRYW.jpg" alt="My baby" style="max-width: 300px;">
+        <div id="valentine-sentence">
+            <h1>Will You Be My Valentine?</h1>
+        </div>
+        <p>Dear Ayooyty,</p>
+        <p>You better say yes ( ˘ ³˘)♥︎ </p>
+        <button id="yesButton" onclick="propose('Yes')">Yes</button>
+        <button id="noButton" onclick="propose('No')">No</button>
+        <p id="response"></p>
+        <div id="cute-messages">
+            <p>Are you sure?</p>
+            <p>Really sure?</p>
+            <p>Pookie please</p>
+            <p>Don't do this to me</p>
+            <p>I'm gonna cry…..</p>
+            <p>You're breaking my heart ; (</p>
+        </div>
+        <img id="helloKittyGIF" src="https://media1.tenor.com/m/i7Sa8ZBIJn4AAAAC/love-you.gif" alt="Hello Kitty GIF">
+    </div>
+
 </body>
 
 </html>
