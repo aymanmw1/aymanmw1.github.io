@@ -21,19 +21,23 @@
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         #passwordInput {
             padding: 10px;
             font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         #proposal-container {
@@ -89,7 +93,7 @@
     <script>
         function checkPassword() {
             // Check for the correct password
-            var enteredPassword = prompt("This website is only for Ayooyty. Enter our anniversary day to access:\n\nEnter the password (format: MM/DD/YYYY):");
+            var enteredPassword = document.getElementById('passwordInput').value;
             var correctPassword = "12/06/2022";
 
             if (enteredPassword !== correctPassword) {
@@ -145,6 +149,8 @@
     </script>
 
     <div id="password-container">
+        <label for="passwordInput">Enter the anniversary day to access:</label>
+        <input type="text" id="passwordInput" placeholder="MM/DD/YYYY">
         <button onclick="checkPassword()">Enter</button>
     </div>
 
